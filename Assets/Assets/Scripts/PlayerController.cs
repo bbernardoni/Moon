@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public float maxSpeed;
     public Transform gunPivot;
     public Transform gun;
+    public DashAbility dashLogic;
 
     public Transform bullet;
 
@@ -30,8 +31,11 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        float hSpeed = Input.GetAxis("Horizontal") * maxSpeed;
-        float vSpeed = Input.GetAxis("Vertical") * maxSpeed;
-        rb2d.velocity = new Vector2(hSpeed, vSpeed);
+        if (!dashLogic.dashing)
+        {
+            float hSpeed = Input.GetAxis("Horizontal") * maxSpeed;
+            float vSpeed = Input.GetAxis("Vertical") * maxSpeed;
+            rb2d.velocity = new Vector2(hSpeed, vSpeed);
+        }
     }
 }

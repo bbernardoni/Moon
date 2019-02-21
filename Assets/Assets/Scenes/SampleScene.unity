@@ -956,6 +956,40 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1921340622 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8509187092104806916, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03,
+    type: 3}
+  m_PrefabInstance: {fileID: 8509187093131799140}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1921340623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921340622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63b82cd21e4d2c048affa26c711e6870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 0
+  frame: 0
+  cooldownTime: 2
+  windUpTime: 0.1
+  dmgTime: 2
+  vlnTime: 3
+  dashTime: 0
+  dashing: 0
+  savedVelocity: {x: 0, y: 0}
+  rb2d: {fileID: 1921340625}
+--- !u!50 &1921340625 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 8509187092104806919, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03,
+    type: 3}
+  m_PrefabInstance: {fileID: 8509187093131799140}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2004677429
 GameObject:
   m_ObjectHideFlags: 0
@@ -1141,5 +1175,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1604231961, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8509187092104806917, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03,
+        type: 3}
+      propertyPath: dashLogic
+      value: 
+      objectReference: {fileID: 1921340623}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03, type: 3}
