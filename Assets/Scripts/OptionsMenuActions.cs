@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using UnityEngine.Audio;
 
 public class OptionsMenuActions : MonoBehaviour {
-    public GameObject mainMenu;
+    public GameObject backMenu;
     public AudioMixer mixer;
     public AudioSource sfxTest;
 
@@ -43,7 +43,7 @@ public class OptionsMenuActions : MonoBehaviour {
     }
 
     public void Back() {
-        mainMenu.SetActive(true);
+        backMenu.SetActive(true);
         gameObject.SetActive(false);
     }
 }

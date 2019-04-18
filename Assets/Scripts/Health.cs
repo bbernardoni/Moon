@@ -7,6 +7,7 @@ public class Health : MonoBehaviour
     public float MaxHP;
     public float RemainingHP;
     public Rigidbody2D rb2d;
+    public UIController uIController;
 
     public bool alive = true;
 
@@ -22,10 +23,14 @@ public class Health : MonoBehaviour
         if (RemainingHP <= 0)
         {
             alive = false;
+            if(uIController)
+                uIController.GameOver();
             Debug.Log("Killed!");
             return true;
         }
-        GetComponent<PlayerSoundController>().TakeDamage();
+        PlayerSoundController psc = GetComponent<PlayerSoundController>();
+        if(psc)
+            psc.TakeDamage();
         Debug.Log("Damage!");
         return false;
     }

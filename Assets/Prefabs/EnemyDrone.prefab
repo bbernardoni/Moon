@@ -57,10 +57,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 670678039}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f095a5a456d41cb4b8ce8f36b3ad83ff, type: 3}
+  m_Script: {fileID: 11500000, guid: e4e04e419817844deb67109d40b14dd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dmg: 2
+  dmg: 0
 --- !u!1 &2991867501808357469
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,6 +208,7 @@ MonoBehaviour:
   MaxHP: 5
   RemainingHP: 0
   rb2d: {fileID: 2991867501808357465}
+  uIController: {fileID: 0}
   alive: 1
 --- !u!114 &8074277045390238249
 MonoBehaviour:

@@ -50,6 +50,7 @@ public class RoutineController : MonoBehaviour
     {
         if (routine == Routine.Aggro) return false;
         routine = Routine.Aggro;
+        GameManager.instance.AggroCounter(1);
         return true;
     }
 

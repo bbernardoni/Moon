@@ -639,9 +639,7 @@ GameObject:
   - component: {fileID: 988374602731329588}
   - component: {fileID: 988374602731329589}
   - component: {fileID: 988374602731329586}
-  - component: {fileID: 5161006290854518575}
   - component: {fileID: 1831969835}
-  - component: {fileID: 843630858938677820}
   - component: {fileID: 669785501}
   m_Layer: 0
   m_Name: Player
@@ -686,6 +684,7 @@ MonoBehaviour:
   gunGameObject: {fileID: 0}
   shotgun: {fileID: 21300000, guid: 64d0ad02fee9e4d63b41dffda57a6996, type: 3}
   pistol: {fileID: 21300000, guid: db7a4e008174e654d8e4a8dd6472836f, type: 3}
+  spriteRenderer: {fileID: 0}
   guns:
   - 
   - 
@@ -696,6 +695,8 @@ MonoBehaviour:
   colDmg: 0
   hp: {fileID: 988374602731329588}
   bullet: {fileID: 3286294735871222309, guid: 0cf6bbfc1cae1b3408a9bbd3d51c091e, type: 3}
+  shotgunBullet: {fileID: 3286294735871222309, guid: d2cb8be6d84384698844acb6019092ae,
+    type: 3}
   animator: {fileID: 1831969835}
 --- !u!50 &988374602731329544
 Rigidbody2D:
@@ -833,6 +834,7 @@ MonoBehaviour:
   MaxHP: 10
   RemainingHP: 0
   rb2d: {fileID: 988374602731329544}
+  uIController: {fileID: 0}
   alive: 1
 --- !u!114 &988374602731329589
 MonoBehaviour:
@@ -870,20 +872,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 261e70028b84cd646a899670c824f11d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5161006290854518575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 988374602731329599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c50dd7723b544e12a9cd977211d2595, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: {fileID: 988374602731329588}
-  current_hp: {fileID: 0}
 --- !u!95 &1831969835
 Animator:
   serializedVersion: 3
@@ -903,22 +891,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &843630858938677820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 988374602731329599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa5649971b5ac42ee8be554fa27ba507, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathObjects: []
-  hp: {fileID: 988374602731329588}
-  restart: {fileID: 0}
-  menu: {fileID: 0}
 --- !u!114 &669785501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -951,8 +923,11 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 70ecfba0c14f5a545b7374105cd869ea, type: 3}
   - {fileID: 8300000, guid: c955e9a02a8f92442920f194f0be8d90, type: 3}
   - {fileID: 8300000, guid: 7d3dd247dc242f14499875203ea87a14, type: 3}
+  fireShotgun:
+  - {fileID: 8300000, guid: 8eabe3f13b1154a92946b9ceaf925fd5, type: 3}
   playerFS: {fileID: 339623903}
   playerGun: {fileID: 1595705254}
   playerVoice: {fileID: 1773328763}
+  playerShotgun: {fileID: 1595705254}
   lowPitchRange: 0.95
   highPitchRange: 1.05

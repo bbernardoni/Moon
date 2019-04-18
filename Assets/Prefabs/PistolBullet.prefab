@@ -47,8 +47,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: add50346ed6e6e149b6f03f4baaa3993, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 5
   dmg: 1
+  distance: 0
 --- !u!212 &7399816113521868450
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -114,7 +115,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
+    oldSize: {x: 1.6, y: 1.6}
     newSize: {x: 0.25, y: 0.13}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -166,7 +167,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3286294735871222309}
   m_Layer: 0
-  m_Name: BulletParent
+  m_Name: PistolBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

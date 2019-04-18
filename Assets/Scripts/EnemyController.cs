@@ -34,8 +34,13 @@ public class EnemyController : MonoBehaviour
     private int patrolState;
     private bool markPlayer;
 
+    private bool stunned;
+    private float stunTime;
+
     void Start()
     {
+        stunned = false;
+        stunTime = 0;
         rb2d = GetComponent<Rigidbody2D>();
         player = GameObject.FindWithTag("Player").GetComponent<Rigidbody2D>();
         routine.SetPatrol();
@@ -49,70 +54,86 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
+        if(stunned == true){
+            stunTime += Time.deltaTime;
+            print(stunTime);
+            if(stunTime >=1){
+                stunned = false;
+                stunTime = 0;
+            }
+        }
 
+    }
+    public void ReceiveStun(){
+        print("received!!!!!!!!!!!!!!!!");
+        SetMoveTo(transform);
+        stunned = true;
     }
 
     void FixedUpdate()
     {
         if (hp.alive)
         {
-            Vector2 enemy_vec = new Vector2(rb2d.transform.position.x, rb2d.transform.position.y);
-            Vector2 player_vec = new Vector2(player.transform.position.x, player.transform.position.y);
-            Vector2 enemy_to_player = player_vec - enemy_vec;
-            float distance = Mathf.Abs(Vector2.Distance(enemy_vec, player_vec));
-            RaycastHit2D see = Physics2D.Linecast(enemy_vec, player_vec); //check if the enemy can see the player
-            if (routine.GetPatrol())
+            if (stunned == false)
             {
-                if(PatrolSize > 0 && targetReached.SetNextTarget(PatrolRoute[patrolState])) patrolState = (patrolState + 1) % PatrolSize;
-            }
-            if (routine.GetAlert() || (distance < alertDistance && see.transform.tag == "Player"))
-            {
-                routine.SetAlert();
-                float angle = Mathf.Atan2(enemy_to_player.y, enemy_to_player.x);
-                gunPivot.rotation = Quaternion.Euler(0, 0, angle * 180 / Mathf.PI); //aim gun at player
-                if (see.transform.tag == "Player")
+                Vector2 enemy_vec = new Vector2(rb2d.transform.position.x, rb2d.transform.position.y);
+                Vector2 player_vec = new Vector2(player.transform.position.x, player.transform.position.y);
+                Vector2 enemy_to_player = player_vec - enemy_vec;
+                float distance = Mathf.Abs(Vector2.Distance(enemy_vec, player_vec));
+                RaycastHit2D see = Physics2D.Linecast(enemy_vec, player_vec); //check if the enemy can see the player
+                if (routine.GetPatrol())
                 {
-                    LastPlayerPos = player_vec;
-                    markPlayer = true;
-                    playerGhost.position = new Vector3(LastPlayerPos.x, LastPlayerPos.y, 0);
+                    if (PatrolSize > 0 && targetReached.SetNextTarget(PatrolRoute[patrolState])) patrolState = (patrolState + 1) % PatrolSize;
                 }
-                else if (markPlayer)
+                if (routine.GetAlert() || (distance < alertDistance && see.transform.tag == "Player"))
                 {
-                    SetMoveTo(playerGhost);
-                    markPlayer = false;
-                }
-                else
-                {
-                    routine.SetForget();
-                    markPlayer = false;
-                }
-            }
-
-            if (routine.GetAggro() || distance < agroDistance)
-            {
-                float angle = Mathf.Atan2(enemy_to_player.y, enemy_to_player.x);
-                gunPivot.rotation = Quaternion.Euler(0, 0, angle * 180 / Mathf.PI); //aim gun at player
-                RaycastHit2D hit = Physics2D.Linecast(gun.position, player_vec); //check if the enemy can see the player
-                if (hit.transform.tag == "Player") //If it can see the player, then shoot at it 
-                {
-                    routine.SetAggro();
-                    if (distance > 3)
+                    routine.SetAlert();
+                    float angle = Mathf.Atan2(enemy_to_player.y, enemy_to_player.x);
+                    gunPivot.rotation = Quaternion.Euler(0, 0, angle * 180 / Mathf.PI); //aim gun at player
+                    if (see.transform.tag == "Player")
                     {
-                        //enemy_to_player.Normalize();
-                        SetMoveTo(player.transform);
-                        //rb2d.velocity = enemy_to_player * maxSpeed;
+                        LastPlayerPos = player_vec;
+                        markPlayer = true;
+                        playerGhost.position = new Vector3(LastPlayerPos.x, LastPlayerPos.y, 0);
                     }
-                    gunCooldown += 1;
-                    if (gunCooldown > 50)
+                    else if (markPlayer)
                     {
-                        gunCooldown = 0;
-                        shootGun(bullet, gun);
+                        SetMoveTo(playerGhost);
+                        markPlayer = false;
+                    }
+                    else
+                    {
+                        routine.SetForget();
+                        markPlayer = false;
+                    }
+                }
+                if (routine.GetAggro() || distance < agroDistance)
+                {
+                    float angle = Mathf.Atan2(enemy_to_player.y, enemy_to_player.x);
+                    gunPivot.rotation = Quaternion.Euler(0, 0, angle * 180 / Mathf.PI); //aim gun at player
+                    RaycastHit2D hit = Physics2D.Linecast(gun.position, player_vec); //check if the enemy can see the player
+                    if (hit.transform.tag == "Player") //If it can see the player, then shoot at it 
+                    {
+                        routine.SetAggro();
+                        if (distance > 3)
+                        {
+                            //enemy_to_player.Normalize();
+                            SetMoveTo(player.transform);
+                            //rb2d.velocity = enemy_to_player * maxSpeed;
+                        }
+                        gunCooldown += 1;
+                        if (gunCooldown > 50)
+                        {
+                            gunCooldown = 0;
+                            shootGun(bullet, gun);
+                        }
                     }
                 }
             }
         }
         else
         {
+            GameManager.instance.AggroCounter(0);
             Instantiate(corpse, new Vector3(rb2d.gameObject.transform.position.x + 1f, rb2d.gameObject.transform.position.y - 0.7f, rb2d.gameObject.transform.position.z), Quaternion.identity);
             Destroy(rb2d.gameObject);
         }

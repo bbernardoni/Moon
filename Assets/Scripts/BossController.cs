@@ -15,6 +15,7 @@ public class BossController : MonoBehaviour
     public Transform MGPivot;
     public Transform machineGun;
     public Transform drone;
+    public Transform door;
 
     private Rigidbody2D rb2d;
     private Rigidbody2D player;
@@ -26,6 +27,8 @@ public class BossController : MonoBehaviour
     private float shootingTime = 0;
     private bool agroed = false;
     private bool shootingMG = false;
+    private bool first_door = false;
+    private bool second_door = true;
 
     void Start()
     {
@@ -47,28 +50,30 @@ public class BossController : MonoBehaviour
             Vector2 enemy_to_player = player_vec - enemy_vec;
             if (!agroed)
             {
-                float distance = Mathf.Abs(Vector2.Distance(enemy_vec, player_vec));
-                RaycastHit2D see = Physics2D.Linecast(enemy_vec, player_vec);
-                if(distance < 10 && see.transform.tag == "Player")
+                float distance = enemy_to_player.sqrMagnitude;
+                if(distance < 100)
                 {
                     agroed = true;
-                }
-                else if(see.transform.tag != "Player")
-                {
-                    agroed = false;
+                    if(first_door == false)
+                    {
+                        Instantiate(door, new Vector3(0, 26, 0), Quaternion.identity);
+                        first_door = true;
+                    }
                 }
             }
             if (agroed)
             {
                 aimGun(machineGun, MGPivot);
                 aimGun(pistol, pistolPivot);
-                //handleDrone();
                 RaycastHit2D hit = Physics2D.Linecast(pistol.position, player_vec); //check if the enemy can see the player
-                if (hit.transform.tag == "Player") //If it can see the player, then shoot at it 
-                { //probably able to get rid of this if statement but not sure yet
-                    enemy_to_player.Normalize();
-                    rb2d.velocity = enemy_to_player * maxSpeed;
-                    rb2d.transform.rotation = Quaternion.identity;
+                if (hit.transform.tag == "Player") 
+                { 
+                    if(shootingMG == false) //Only move when the machine gun isn't shooting
+                    {
+                        enemy_to_player.Normalize();
+                        rb2d.velocity = enemy_to_player * maxSpeed;
+                    }
+                    //rb2d.transform.rotation = Quaternion.identity;
                     handleShooting();
                 }
             }
@@ -77,31 +82,27 @@ public class BossController : MonoBehaviour
         {
             Instantiate(corpse, new Vector3(rb2d.gameObject.transform.position.x + 1f, rb2d.gameObject.transform.position.y - 0.7f, rb2d.gameObject.transform.position.z), Quaternion.identity);
             Destroy(rb2d.gameObject);
+            if(second_door == true)
+            {
+                Destroy(door.gameObject);
+                second_door = false;
+            }
         }
     }
 
     private void shootGun(Transform bullet, Transform gun)
     {
-        //if(gun == machineGun)
-        {
-            var shooting = Instantiate(bullet, gun.position, gun.rotation); //make it spawn at end of gun
-            shooting.tag = "EnemyAttack";
-        }
-        /*else
-        {
-            var shooting = Instantiate(bullet, gun.position, gun.rotation);
-            shooting.tag = "EnemyAttack";
-        }*/
-        
+        var shooting = Instantiate(bullet, gun.position, gun.rotation); //make it spawn at end of gun ?
+        shooting.tag = "EnemyAttack";
     }
 
     private void aimGun(Transform gun, Transform gunPivot)
     {
         Vector2 player_vec = new Vector2(player.transform.position.x, player.transform.position.y);
-        /*if (gun == pistol)
-        {
-            player_vec += player.velocity/2; //woww this makes it really tough!
-        }*/
+        //if (gun == pistol)
+        //{
+        //    player_vec += player.velocity / 8; //woww this makes it tough
+        //}
         Vector2 gun_vec = new Vector2(gun.transform.position.x, gun.transform.position.y);
         gun_vec = player_vec - gun_vec;
 
@@ -126,14 +127,15 @@ public class BossController : MonoBehaviour
                 MGCooldown = 0;
                 shootGun(MGBullet, machineGun);
             }
-            if(shootingTime > 200)
+            if(shootingTime > 250)
             {
                 shootingMG = false;
                 shootingTime = 0;
+                //spawnDrone();
             }
         } else
         {
-            if(shootingTime > 300)
+            if(shootingTime > 350)
             {
                 shootingMG = true;
                 shootingTime = 0;
@@ -141,13 +143,8 @@ public class BossController : MonoBehaviour
         }
     }
 
-    private void handleDrone()
+    private void spawnDrone()
     {
-        droneCooldown += 1;
-        if(droneCooldown > 1000)
-        {
-            Instantiate(drone, new Vector3(12, 40, 0), Quaternion.identity);
-            droneCooldown = 0;
-        }
+        Instantiate(drone, new Vector3(12, 40, 0), Quaternion.identity);
     }
 }

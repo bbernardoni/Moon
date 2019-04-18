@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
 
     public Sprite shotgun;
     public Sprite pistol;
+    public SpriteRenderer spriteRenderer;
     public string[] guns = new string[2];
     public int currentGun = 0;
 
@@ -24,6 +25,7 @@ public class PlayerController : MonoBehaviour
     public Health hp;
 
     public Transform bullet;
+    public Transform shotgunBullet;
 
     private Rigidbody2D rb2d;
     private DashAbility dashLogic;
@@ -45,7 +47,7 @@ public class PlayerController : MonoBehaviour
         pistol = Resources.Load<Sprite>("Pistol") as Sprite;
         guns[0] = "pistol";
         guns[1] = "shotgun";
-
+        spriteRenderer = gun.GetComponent<SpriteRenderer>();
 
     }
 
@@ -58,6 +60,12 @@ public class PlayerController : MonoBehaviour
             Vector2 mouseDelta = mouseWorld - gunPivot.position;
             float angle = Mathf.Atan2(mouseDelta.y, mouseDelta.x);
             gunPivot.rotation = Quaternion.Euler(0, 0, angle * 180 / Mathf.PI);
+
+            if(angle > 1.5 || angle < -1.5){
+                spriteRenderer.flipY = true;
+            }else{
+                spriteRenderer.flipY = false;
+            }
 
             // translate camera
             Vector3 camTarget = new Vector3(camDistance * Mathf.Cos(angle), camDistance * Mathf.Sin(angle), -10);
@@ -78,11 +86,20 @@ public class PlayerController : MonoBehaviour
                         if(time > 70)
                         {
                             GetComponent<PlayerSoundController>().FireShotgun();
-                            Quaternion bullet2Rotation = Quaternion.Euler(gun.rotation.eulerAngles.x, gun.rotation.eulerAngles.y, gun.rotation.eulerAngles.z + 10);
+                            Quaternion bullet2Rotation = Quaternion.Euler(gun.rotation.eulerAngles.x, gun.rotation.eulerAngles.y, gun.rotation.eulerAngles.z - 5);
                             Quaternion bullet3Rotation = Quaternion.Euler(gun.rotation.eulerAngles.x, gun.rotation.eulerAngles.y, gun.rotation.eulerAngles.z - 10);
-                            shootBullet(bullet, gun.position, bullet2Rotation);
-                            shootBullet(bullet, gun.position, bullet3Rotation);
-                            shootBullet(bullet, gun.position, gun.rotation);
+                            Quaternion bullet4Rotation = Quaternion.Euler(gun.rotation.eulerAngles.x, gun.rotation.eulerAngles.y, gun.rotation.eulerAngles.z - 15);
+                            Quaternion bullet5Rotation = Quaternion.Euler(gun.rotation.eulerAngles.x, gun.rotation.eulerAngles.y, gun.rotation.eulerAngles.z + 5);
+                            Quaternion bullet6Rotation = Quaternion.Euler(gun.rotation.eulerAngles.x, gun.rotation.eulerAngles.y, gun.rotation.eulerAngles.z + 10);
+                            Quaternion bullet7Rotation = Quaternion.Euler(gun.rotation.eulerAngles.x, gun.rotation.eulerAngles.y, gun.rotation.eulerAngles.z + 15);
+
+                            shootBullet(shotgunBullet, gun.position, bullet2Rotation);
+                            shootBullet(shotgunBullet, gun.position, bullet3Rotation);
+                            shootBullet(shotgunBullet, gun.position, bullet4Rotation);
+                            shootBullet(shotgunBullet, gun.position, bullet5Rotation);
+                            shootBullet(shotgunBullet, gun.position, bullet6Rotation);
+                            shootBullet(shotgunBullet, gun.position, bullet7Rotation);
+                            shootBullet(shotgunBullet, gun.position, gun.rotation);
                             time = 0;
                         } 
                         break;
