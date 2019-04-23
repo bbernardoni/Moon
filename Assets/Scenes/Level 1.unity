@@ -12813,7 +12813,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb2d: {fileID: 449144906}
   player: {fileID: 2016614556}
-  lm: {fileID: 0}
+  lm: {fileID: 551388542842027332}
 --- !u!4 &449234637 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4925001517059558124, guid: 1dfd42a5414d24a83a39b5e1e3f21acf,
@@ -39175,6 +39175,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 988374602731329546, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 988374602731329546, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 843630858938677820, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03,
         type: 3}
       propertyPath: menu
@@ -57060,6 +57070,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 3962000769469547650, guid: c4039dbd3e3f540468e57810523f3bd9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 551388542842027332}
+    - target: {fileID: 3962000769469547650, guid: c4039dbd3e3f540468e57810523f3bd9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResetLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 3962000770083076884, guid: c4039dbd3e3f540468e57810523f3bd9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 551388542842027332}
+    - target: {fileID: 3962000770083076884, guid: c4039dbd3e3f540468e57810523f3bd9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitMainMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 3962000769200231800, guid: c4039dbd3e3f540468e57810523f3bd9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -57175,26 +57205,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1357013648}
-    - target: {fileID: 3962000769469547650, guid: c4039dbd3e3f540468e57810523f3bd9,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 551388542842027332}
-    - target: {fileID: 3962000769469547650, guid: c4039dbd3e3f540468e57810523f3bd9,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ResetLevel
-      objectReference: {fileID: 0}
-    - target: {fileID: 3962000770083076884, guid: c4039dbd3e3f540468e57810523f3bd9,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 551388542842027332}
-    - target: {fileID: 3962000770083076884, guid: c4039dbd3e3f540468e57810523f3bd9,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ExitMainMenu
-      objectReference: {fileID: 0}
     - target: {fileID: 3962000770078113974, guid: c4039dbd3e3f540468e57810523f3bd9,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
