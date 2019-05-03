@@ -42,7 +42,9 @@ public class BulletController : MonoBehaviour
                 if(enemy) {
                     if(transform.parent.name == "PistolBullet(Clone)"){
                         enemy.ReceiveStun();
-                        enemy.KnockBack(transform.right);
+                        enemy.KnockBack(transform.right, 0.15f);
+                    }else if(transform.parent.name == "ShotgunBullet(Clone)"){
+                        enemy.KnockBack(transform.right, 0.4f);
                     }
                 }
             }

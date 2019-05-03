@@ -12,11 +12,12 @@ public class PlayerController : MonoBehaviour
 
     private Sprite shotgun;
     private Sprite pistol;
+    public Sprite railgun;
     private Animator pistolAnim, shotgunAnim;
     private SpriteRenderer spriteRenderer;
 
     public bool lookR;
-    public string[] guns = new string[2];
+    public string[] guns;
     public int currentGun = 0;
 
     public float camDistance;
@@ -28,6 +29,7 @@ public class PlayerController : MonoBehaviour
 
     public Transform bullet;
     public Transform shotgunBullet;
+    public Transform railgunBullet;
 
     private Rigidbody2D rb2d;
     private DashAbility dashLogic;
@@ -50,12 +52,15 @@ public class PlayerController : MonoBehaviour
         gunGameObject = gun.gameObject;
         shotgun = Resources.Load<Sprite>("Shotgun1") as Sprite;
         pistol = Resources.Load<Sprite>("Pistol1") as Sprite;
+        railgun = Resources.Load<Sprite>("Pistol1") as Sprite;
+
         pistolAnim = Resources.Load<Animator>("PistolAnimator") as Animator;
         shotgunAnim = Resources.Load<Animator>("ShotgunAnimator") as Animator;
-
+        spriteRenderer = gun.GetComponent<SpriteRenderer>();
+        guns = new string[3];
         guns[0] = "Pistol1";
         guns[1] = "Shotgun1";
-        spriteRenderer = gun.GetComponent<SpriteRenderer>();
+        guns[2] = "Railgun1";
 
     }
 
@@ -131,6 +136,13 @@ public class PlayerController : MonoBehaviour
                             time = 0;
                         } 
                         break;
+                    case "Railgun1":
+                        if(time>120){
+                            GetComponent<PlayerSoundController>().FireRailgun();
+                            shootBullet(railgunBullet, gun.position, gun.rotation);
+                            time = 0;
+                        }
+                        break;
                     default:
                         //shootBullet(bullet, gun.position, gun.rotation);
                         break;
@@ -148,17 +160,21 @@ public class PlayerController : MonoBehaviour
             if(switchGun != currentGun) {
                 currentGun = switchGun;
                 switch(guns[currentGun]) {
-                case "Pistol1":
-                    gunGameObject.GetComponent<Animator>().SetTrigger("ToPistol");
-                    gunGameObject.GetComponent<SpriteRenderer>().sprite = pistol;
-                    break;
-                case "Shotgun1":
-                    gunGameObject.GetComponent<Animator>().SetTrigger("ToShotgun");
-                    gunGameObject.GetComponent<SpriteRenderer>().sprite = shotgun;
-                    break;
-                default:
-                    gunGameObject.GetComponent<SpriteRenderer>().sprite = pistol;
-                    break;
+                    case "Pistol1":
+                        gunGameObject.GetComponent<Animator>().SetTrigger("ToPistol");
+                        gunGameObject.GetComponent<SpriteRenderer>().sprite = pistol;
+                        break;
+                    case "Shotgun1":
+                        gunGameObject.GetComponent<Animator>().SetTrigger("ToShotgun");
+                        gunGameObject.GetComponent<SpriteRenderer>().sprite = shotgun;
+                        break;      
+                    case "Railgun1":
+                        gunGameObject.GetComponent<Animator>().SetTrigger("ToRailgun");
+                        gunGameObject.GetComponent<SpriteRenderer>().sprite = railgun;
+                        break;
+                    default:
+                        gunGameObject.GetComponent<SpriteRenderer>().sprite = pistol;
+                        break;
 
                 }
             }

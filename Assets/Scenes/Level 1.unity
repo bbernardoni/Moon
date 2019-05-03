@@ -3422,6 +3422,10 @@ PrefabInstance:
       propertyPath: detailedGizmos
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1943029798, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
+      propertyPath: A
+      value: 
+      objectReference: {fileID: 34566630}
     - target: {fileID: 7788004879343467006, guid: d11f0aadb0584eb4ebaecc1707465498,
         type: 3}
       propertyPath: alwaysDrawGizmos
@@ -3432,10 +3436,6 @@ PrefabInstance:
       propertyPath: constrainInsideGraph
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1943029798, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
-      propertyPath: A
-      value: 
-      objectReference: {fileID: 34566630}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
 --- !u!1001 &168359688
@@ -12713,6 +12713,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 436076160}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &439535419 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1595705254, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03,
+    type: 3}
+  m_PrefabInstance: {fileID: 1418347409}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &448682774 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4925001517059558124, guid: 1dfd42a5414d24a83a39b5e1e3f21acf,
@@ -14447,6 +14453,10 @@ PrefabInstance:
       propertyPath: detailedGizmos
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1943029798, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
+      propertyPath: A
+      value: 
+      objectReference: {fileID: 34566630}
     - target: {fileID: 7788004879343467006, guid: d11f0aadb0584eb4ebaecc1707465498,
         type: 3}
       propertyPath: alwaysDrawGizmos
@@ -14457,10 +14467,6 @@ PrefabInstance:
       propertyPath: constrainInsideGraph
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1943029798, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
-      propertyPath: A
-      value: 
-      objectReference: {fileID: 34566630}
     - target: {fileID: 6451590728446967258, guid: d11f0aadb0584eb4ebaecc1707465498,
         type: 3}
       propertyPath: PatrolRoute.Array.data[0]
@@ -17297,6 +17303,10 @@ PrefabInstance:
       propertyPath: detailedGizmos
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1943029798, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
+      propertyPath: A
+      value: 
+      objectReference: {fileID: 34566630}
     - target: {fileID: 7788004879343467006, guid: d11f0aadb0584eb4ebaecc1707465498,
         type: 3}
       propertyPath: alwaysDrawGizmos
@@ -17307,10 +17317,6 @@ PrefabInstance:
       propertyPath: constrainInsideGraph
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1943029798, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
-      propertyPath: A
-      value: 
-      objectReference: {fileID: 34566630}
     - target: {fileID: 6451590728446967258, guid: d11f0aadb0584eb4ebaecc1707465498,
         type: 3}
       propertyPath: PatrolRoute.Array.data[0]
@@ -17822,6 +17828,10 @@ PrefabInstance:
       propertyPath: detailedGizmos
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1943029798, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
+      propertyPath: A
+      value: 
+      objectReference: {fileID: 34566630}
     - target: {fileID: 7788004879343467006, guid: d11f0aadb0584eb4ebaecc1707465498,
         type: 3}
       propertyPath: alwaysDrawGizmos
@@ -17832,10 +17842,6 @@ PrefabInstance:
       propertyPath: constrainInsideGraph
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1943029798, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
-      propertyPath: A
-      value: 
-      objectReference: {fileID: 34566630}
     - target: {fileID: 6451590728446967258, guid: d11f0aadb0584eb4ebaecc1707465498,
         type: 3}
       propertyPath: PatrolRoute.Array.data[0]
@@ -26456,6 +26462,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: electric_r
       objectReference: {fileID: 0}
+    - target: {fileID: 8078726684708830898, guid: 6c437dfef580f420aaca734af9d860c3,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2016614556}
     - target: {fileID: 2730255001103494643, guid: 6c437dfef580f420aaca734af9d860c3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -26511,11 +26522,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8078726684708830898, guid: 6c437dfef580f420aaca734af9d860c3,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 2016614556}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c437dfef580f420aaca734af9d860c3, type: 3}
 --- !u!1001 &1015952081
@@ -26889,6 +26895,10 @@ PrefabInstance:
       propertyPath: detailedGizmos
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1943029798, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
+      propertyPath: A
+      value: 
+      objectReference: {fileID: 34566630}
     - target: {fileID: 7788004879343467006, guid: d11f0aadb0584eb4ebaecc1707465498,
         type: 3}
       propertyPath: alwaysDrawGizmos
@@ -26899,10 +26909,6 @@ PrefabInstance:
       propertyPath: constrainInsideGraph
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1943029798, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
-      propertyPath: A
-      value: 
-      objectReference: {fileID: 34566630}
     - target: {fileID: 6451590728446967258, guid: d11f0aadb0584eb4ebaecc1707465498,
         type: 3}
       propertyPath: PatrolRoute.Array.size
@@ -32495,6 +32501,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 254479785}
     m_Modifications:
+    - target: {fileID: 6183641266302782276, guid: e322ecdc5b59ff54da8f9b1bb3cfd455,
+        type: 3}
+      propertyPath: m_Name
+      value: Corpse
+      objectReference: {fileID: 0}
+    - target: {fileID: 6183641266302782276, guid: e322ecdc5b59ff54da8f9b1bb3cfd455,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     - target: {fileID: 6183641266302782330, guid: e322ecdc5b59ff54da8f9b1bb3cfd455,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -32564,16 +32580,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6183641266302782276, guid: e322ecdc5b59ff54da8f9b1bb3cfd455,
-        type: 3}
-      propertyPath: m_Name
-      value: Corpse
-      objectReference: {fileID: 0}
-    - target: {fileID: 6183641266302782276, guid: e322ecdc5b59ff54da8f9b1bb3cfd455,
-        type: 3}
-      propertyPath: m_TagString
-      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 6183641266302782277, guid: e322ecdc5b59ff54da8f9b1bb3cfd455,
         type: 3}
@@ -38865,6 +38871,18 @@ PrefabInstance:
       propertyPath: uIController
       value: 
       objectReference: {fileID: 491922291}
+    - target: {fileID: 988374602731329547, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03,
+        type: 3}
+      propertyPath: railgunBullet
+      value: 
+      objectReference: {fileID: 3286294735871222309, guid: 713b338447a7a41b2829aba4745e95b8,
+        type: 3}
+    - target: {fileID: 988374602731329547, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03,
+        type: 3}
+      propertyPath: railgun
+      value: 
+      objectReference: {fileID: 21300000, guid: 8e53da4922f2b46e1a7e1641fb40aa24,
+        type: 3}
     - target: {fileID: 988374602731329546, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -38920,6 +38938,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 669785501, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03, type: 3}
+      propertyPath: fireRailgun.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 669785501, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03, type: 3}
+      propertyPath: fireRailgun.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 65d05d21e03754398820ec4d34582dde, type: 3}
+    - target: {fileID: 669785501, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03, type: 3}
+      propertyPath: playerRailgun
+      value: 
+      objectReference: {fileID: 439535419}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03, type: 3}
 --- !u!1001 &1423503521
@@ -43681,6 +43711,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1943029798, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
+      propertyPath: A
+      value: 
+      objectReference: {fileID: 34566630}
     - target: {fileID: 7788004879343467006, guid: d11f0aadb0584eb4ebaecc1707465498,
         type: 3}
       propertyPath: alwaysDrawGizmos
@@ -43691,10 +43725,6 @@ PrefabInstance:
       propertyPath: constrainInsideGraph
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1943029798, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
-      propertyPath: A
-      value: 
-      objectReference: {fileID: 34566630}
     - target: {fileID: 6451590728446967258, guid: d11f0aadb0584eb4ebaecc1707465498,
         type: 3}
       propertyPath: PatrolRoute.Array.size
@@ -43935,6 +43965,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: electric
       objectReference: {fileID: 0}
+    - target: {fileID: 8078726684708830898, guid: 6c437dfef580f420aaca734af9d860c3,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2016614556}
     - target: {fileID: 2730255001103494643, guid: 6c437dfef580f420aaca734af9d860c3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -43990,11 +44025,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8078726684708830898, guid: 6c437dfef580f420aaca734af9d860c3,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 2016614556}
     - target: {fileID: 6472085138307913110, guid: 6c437dfef580f420aaca734af9d860c3,
         type: 3}
       propertyPath: m_FlipX
@@ -46519,6 +46549,10 @@ PrefabInstance:
       propertyPath: detailedGizmos
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1943029798, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
+      propertyPath: A
+      value: 
+      objectReference: {fileID: 34566630}
     - target: {fileID: 7788004879343467006, guid: d11f0aadb0584eb4ebaecc1707465498,
         type: 3}
       propertyPath: alwaysDrawGizmos
@@ -46529,10 +46563,6 @@ PrefabInstance:
       propertyPath: constrainInsideGraph
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1943029798, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
-      propertyPath: A
-      value: 
-      objectReference: {fileID: 34566630}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
 --- !u!1001 &1760003530
@@ -49880,6 +49910,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 254479785}
     m_Modifications:
+    - target: {fileID: 2932382477473912115, guid: 2e82772f17f8ca94d9d63d0474c739e6,
+        type: 3}
+      propertyPath: m_Name
+      value: Blood
+      objectReference: {fileID: 0}
     - target: {fileID: 2932382477473912114, guid: 2e82772f17f8ca94d9d63d0474c739e6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -49934,11 +49969,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2932382477473912115, guid: 2e82772f17f8ca94d9d63d0474c739e6,
-        type: 3}
-      propertyPath: m_Name
-      value: Blood
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e82772f17f8ca94d9d63d0474c739e6, type: 3}
@@ -55943,6 +55973,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: electric_7
       objectReference: {fileID: 0}
+    - target: {fileID: 8078726684708830898, guid: 6c437dfef580f420aaca734af9d860c3,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2016614556}
     - target: {fileID: 2730255001103494643, guid: 6c437dfef580f420aaca734af9d860c3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -55998,11 +56033,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8078726684708830898, guid: 6c437dfef580f420aaca734af9d860c3,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 2016614556}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c437dfef580f420aaca734af9d860c3, type: 3}
 --- !u!4 &2131455899 stripped
@@ -56908,6 +56938,12 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1357013648}
+    - target: {fileID: 3962000768173197229, guid: c4039dbd3e3f540468e57810523f3bd9,
+        type: 3}
+      propertyPath: railgun
+      value: 
+      objectReference: {fileID: 21300000, guid: 8e53da4922f2b46e1a7e1641fb40aa24,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4039dbd3e3f540468e57810523f3bd9, type: 3}
 --- !u!4 &5760775406172839393 stripped

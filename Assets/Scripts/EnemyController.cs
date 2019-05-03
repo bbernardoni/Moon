@@ -75,7 +75,7 @@ public class EnemyController : MonoBehaviour
     }
     public void ReceiveStun(){
         stunCount++;
-        if (stunCount == 2)
+        if (stunCount == 4)
         {
             SetMoveTo(transform);
             stunned = true;
@@ -83,9 +83,12 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    public void KnockBack(Vector2 Direction){
+    public void KnockBack(Vector2 Direction,float time){
+        if(knockBacked == false){
+            knockBackDirection = Direction;
+            knockBackTime = time;
+        }
         knockBacked = true;
-        knockBackDirection = Direction;
         print("KnockBack!!!!!!!!");
 
 
@@ -107,9 +110,9 @@ public class EnemyController : MonoBehaviour
             }
             if (knockBacked == true){
                 SetMoveTo(transform);
-                knockBackTime += Time.deltaTime;
+                knockBackTime -= Time.deltaTime;
                 transform.Translate(knockBackDirection * Time.deltaTime * 5);
-                if (knockBackTime >= 0.5){
+                if (knockBackTime <= 0){
                     knockBackTime = 0;
                     knockBacked = false;
                 }
