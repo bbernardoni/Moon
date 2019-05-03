@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
 
     private Sprite shotgun;
     private Sprite pistol;
-    public Sprite railgun;
+    private Sprite railgun;
     private Animator pistolAnim, shotgunAnim;
     private SpriteRenderer spriteRenderer;
 
