@@ -137,7 +137,7 @@ public class PlayerController : MonoBehaviour
                         } 
                         break;
                     case "Railgun1":
-                        if(time>120){
+                        if(time>100){
                             GetComponent<PlayerSoundController>().FireRailgun();
                             shootBullet(railgunBullet, gun.position, gun.rotation);
                             time = 0;

@@ -25,7 +25,7 @@ public class EnemyController : MonoBehaviour
     private Vector2 LastPlayerPos;
 
     private float agroDistance = 15;
-    private float alertDistance = 20;
+    private float alertDistance = 400;
     private float gunCooldown = 15;
 
     public RoutineController routine;
@@ -122,7 +122,7 @@ public class EnemyController : MonoBehaviour
                 Vector2 enemy_vec = new Vector2(rb2d.transform.position.x, rb2d.transform.position.y);
                 Vector2 player_vec = new Vector2(player.transform.position.x, player.transform.position.y);
                 Vector2 enemy_to_player = player_vec - enemy_vec;
-                float distance = Mathf.Abs(Vector2.Distance(enemy_vec, player_vec));
+                float distance = enemy_to_player.sqrMagnitude;
                 RaycastHit2D see = Physics2D.Linecast(enemy_vec, player_vec); //check if the enemy can see the player
                 if (routine.GetPatrol())
                 {
