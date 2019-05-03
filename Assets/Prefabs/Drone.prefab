@@ -236,10 +236,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7860812427076818809}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f095a5a456d41cb4b8ce8f36b3ad83ff, type: 3}
+  m_Script: {fileID: 11500000, guid: e4e04e419817844deb67109d40b14dd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dmg: 75
+  dmg: 70
   explosion: {fileID: 4671226840319715866, guid: 4c20738892c81224d8f20157528b09c6,
     type: 3}
-  explosionSound: {fileID: 8300000, guid: 54a2a0e379b87cd40bec2d23e9e6a4fb, type: 3}
+  explosionSound: {fileID: 8300000, guid: 457fd3588a88a754685be5bd0b53b6f3, type: 3}
