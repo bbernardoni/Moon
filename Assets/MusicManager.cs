@@ -23,11 +23,11 @@ public class MusicManager : MonoBehaviour
     void Awake()
     {
         musicInPlay = false;
-        current_music = MusicState.OutOfCombat;
+        current_music = MusicState.Menu;
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         switch (current_music)
         {
@@ -39,8 +39,10 @@ public class MusicManager : MonoBehaviour
                 }
                 break;
             case MusicState.FadeMusic:
-                if (!SoundManager.instance.FadeOutMusic())
-                    current_music = MusicState.Idle;
+                if(!SoundManager.instance.FadeOutMusic()) {
+                    musicInPlay = false;
+                    current_music = next_music;
+                }
                 break;
             case MusicState.Idle:
                 musicInPlay = false;
