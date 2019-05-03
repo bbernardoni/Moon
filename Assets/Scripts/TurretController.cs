@@ -10,7 +10,8 @@ public class TurretController : MonoBehaviour
 
     private Rigidbody2D rb2d;
     private Rigidbody2D player;
-    private int cooldown = 0;
+    private float cooldown = 0;
+    private bool agroed = false;
 
     // Start is called before the first frame update
     void Start()
@@ -38,19 +39,29 @@ public class TurretController : MonoBehaviour
             {
                 float angle = Mathf.Atan2(gun_to_player.y, gun_to_player.x);
                 rb2d.transform.rotation = Quaternion.Euler(0, 0, angle * 180 / Mathf.PI + 90);
-                cooldown += 1;
-                if(cooldown > 50)
+                cooldown += Time.fixedDeltaTime;
+                if(cooldown > 0.5)
                 {
                     cooldown = 0;
                     var shooting = Instantiate(bullet, rb2d.transform.position, Quaternion.Euler(0, 0, angle * 180 / Mathf.PI));
                     shooting.tag = "EnemyAttack";
                 }
+
+                if(!agroed)
+                    GameManager.instance.AggroCounter(1, false);
+                agroed = true;
+            }
+            else {
+                if(agroed)
+                    GameManager.instance.AggroCounter(0, false);
+                agroed = false;
             }
             
             
         }
-        else
-        {
+        else {
+            if(agroed)
+                GameManager.instance.AggroCounter(0, false);
             Destroy(rb2d.transform.parent.gameObject);
         }
     }

@@ -40,6 +40,7 @@ public class DroneController : MonoBehaviour
                     if(see.transform.tag == "Player")
                     {
                         agroed = true;
+                        GameManager.instance.AggroCounter(1, false);
                     }
                 }
             }
@@ -50,8 +51,9 @@ public class DroneController : MonoBehaviour
                 rb2d.velocity = drone_vec * maxSpeed;
             }
         }
-        else
-        {
+        else {
+            if(agroed)
+                GameManager.instance.AggroCounter(0, false);
             SoundManager.instance.PlaySingle(explosionSound);
             Instantiate(explosion, rb2d.transform.position, Quaternion.identity);
             Destroy(rb2d.gameObject);

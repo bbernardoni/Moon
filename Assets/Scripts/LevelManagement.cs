@@ -51,6 +51,10 @@ public class LevelManagement : MonoBehaviour
         GameManager.instance.isStopped = false;
     }
 
+    public int GetLevel() {
+        return currentLevel;
+    }
+
     public void ExitMainMenu() {
         currentLevel = 0;
         SceneManager.LoadScene("Main Menu");
