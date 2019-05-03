@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private MusicManager musicManager;
     public bool inCombat;
     public bool isStopped;
-    public bool isBoss;
     public bool isMenu;
     public GameObject player;
     [SerializeField] public int CombatCounter;
@@ -35,7 +34,8 @@ public class GameManager : MonoBehaviour
         {
             if (CombatCounter > 0) inCombat = true;
             else inCombat = false;
-
+            
+            bool isBoss = GetComponent<LevelManagement>().IsBossLevel();
             if (inCombat & !isBoss & player.GetComponent<Health>().alive)
             {
                 SetCombat();

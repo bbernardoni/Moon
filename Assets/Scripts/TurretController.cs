@@ -33,7 +33,7 @@ public class TurretController : MonoBehaviour
             Vector2 player_vec = new Vector2(player.transform.position.x, player.transform.position.y);
             Vector2 gun_to_player = player_vec - gun_vec;
             RaycastHit2D see = Physics2D.Linecast(rb2d.transform.position, player_vec); //check if the enemy can see the player
-            Debug.Log(see.transform.tag);
+            //Debug.Log(see.transform.tag);
             if(see.transform.tag == "Player")
             {
                 float angle = Mathf.Atan2(gun_to_player.y, gun_to_player.x);

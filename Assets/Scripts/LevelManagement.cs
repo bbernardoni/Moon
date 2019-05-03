@@ -56,4 +56,9 @@ public class LevelManagement : MonoBehaviour
         SceneManager.LoadScene("Main Menu");
         GameManager.instance.isStopped = false;
     }
+
+    public bool IsBossLevel() {
+        string scene = SceneManager.GetActiveScene().name;
+        return scene.Contains("Boss");
+    }
 }
