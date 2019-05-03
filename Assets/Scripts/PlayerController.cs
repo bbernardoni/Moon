@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     private Sprite railgun;
     private Animator pistolAnim, shotgunAnim;
     private SpriteRenderer spriteRenderer;
+    private int num_gun;
 
     public bool lookR;
     public string[] guns;
@@ -58,6 +59,7 @@ public class PlayerController : MonoBehaviour
         shotgunAnim = Resources.Load<Animator>("ShotgunAnimator") as Animator;
         spriteRenderer = gun.GetComponent<SpriteRenderer>();
         guns = new string[3];
+        num_gun = 2;
         guns[0] = "Pistol1";
         guns[1] = "Shotgun1";
         guns[2] = "Railgun1";
@@ -151,10 +153,10 @@ public class PlayerController : MonoBehaviour
 
             int switchGun = currentGun;
             if(Input.GetButtonDown("SwitchForward")) {
-                switchGun = (switchGun + 1) % guns.Length;
+                switchGun = (switchGun + 1) % num_gun;
             }
             if(Input.GetButtonDown("SwitchBack")) {
-                switchGun = (switchGun + guns.Length - 1) % guns.Length;
+                switchGun = (switchGun + guns.Length - 1) % num_gun;
             }
 
             if(switchGun != currentGun) {
@@ -231,8 +233,10 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Collision detected");
             if (collision.tag == "Killable" && dashLogic.frame == DashAbility.Frames.Damage)
             {
-                if(collision.isTrigger) {
-                    if(collision.gameObject.GetComponent<Health>().takeDamage(swordDmg)) {
+                if (collision.isTrigger)
+                {
+                    if (collision.gameObject.GetComponent<Health>().takeDamage(swordDmg))
+                    {
                         dashLogic.setKilled();
                         hp.takeHeal(35);
                     }
@@ -248,6 +252,10 @@ public class PlayerController : MonoBehaviour
             {
 
 
+            }
+            else if (collision.gameObject.name =="Railgun") {
+                Destroy(collision.gameObject);
+                num_gun++;
             }
         }
     }
