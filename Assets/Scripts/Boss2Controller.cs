@@ -113,11 +113,11 @@ public class Boss2Controller : MonoBehaviour
             random_switch();
             gunCooldown = 0;
         }
-        if(rb2d.transform.position.x > 34.2)
+        if(rb2d.transform.position.x > 32.5)
         {
             currDirection.x = -0.3f;
         }
-        else if(rb2d.transform.position.x < 32.8)
+        else if(rb2d.transform.position.x < 31.5)
         {
             currDirection.x = 0.3f;
         }

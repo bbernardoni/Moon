@@ -57,7 +57,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!212 &7475280967376167894
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -189,7 +189,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1766112507699669401}
   - component: {fileID: 1043763869969117908}
-  - component: {fileID: 1537513295797498408}
+  - component: {fileID: 8316865138596701628}
   m_Layer: 2
   m_Name: Explosion
   m_TagString: Untagged
@@ -227,7 +227,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1
---- !u!114 &1537513295797498408
+--- !u!114 &8316865138596701628
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -236,7 +236,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7860812427076818809}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4e04e419817844deb67109d40b14dd4, type: 3}
+  m_Script: {fileID: 11500000, guid: f095a5a456d41cb4b8ce8f36b3ad83ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dmg: 75
