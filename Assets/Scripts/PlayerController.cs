@@ -61,7 +61,7 @@ public class PlayerController : MonoBehaviour
         spriteRenderer = gun.GetComponent<SpriteRenderer>();
         guns = new string[3];
         int level = GameManager.instance.GetComponent<LevelManagement>().GetLevel();
-        if (level >= 4)
+        if (level < 4)
         {
             num_gun = 2;
         }else{
