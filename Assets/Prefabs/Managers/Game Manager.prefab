@@ -52,6 +52,8 @@ MonoBehaviour:
   isMenu: 0
   player: {fileID: 0}
   CombatCounter: 0
+  useKeyboard: 0
+  tutorial: 0
 --- !u!114 &551388542842027332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,6 +71,7 @@ MonoBehaviour:
   - Level 1
   - Level 1 Boss
   - Level 2
+  - Level 2 Boss
 --- !u!1 &3286337813292664947
 GameObject:
   m_ObjectHideFlags: 0
