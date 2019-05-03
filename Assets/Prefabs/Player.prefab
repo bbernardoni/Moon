@@ -688,7 +688,7 @@ MonoBehaviour:
   gunPivot: {fileID: 988374602421172176}
   gun: {fileID: 988374601260895697}
   corpse: {fileID: 8729596025865877029, guid: 7b9547a3e8b96ed42893daba70602b10, type: 3}
-  railgun: {fileID: 21300000, guid: 8e53da4922f2b46e1a7e1641fb40aa24, type: 3}
+  railgun: {fileID: 21300000, guid: 67ce39093f7474787be5a99fd44d9e2f, type: 3}
   lookR: 0
   guns:
   - 
