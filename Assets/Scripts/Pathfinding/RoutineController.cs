@@ -11,7 +11,7 @@ public class RoutineController : MonoBehaviour
 
     Routine routine;
 
-    bool aggroedOnce;
+    public bool aggroedOnce;
 
     void Start()
     {

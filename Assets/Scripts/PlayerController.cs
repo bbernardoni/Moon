@@ -60,8 +60,8 @@ public class PlayerController : MonoBehaviour
         shotgunAnim = Resources.Load<Animator>("ShotgunAnimator") as Animator;
         spriteRenderer = gun.GetComponent<SpriteRenderer>();
         guns = new string[3];
-        Scene scene = SceneManager.GetActiveScene();
-        if (scene.name != "Level 2 Boss")
+        int level = GameManager.instance.GetComponent<LevelManagement>().GetLevel();
+        if (level >= 4)
         {
             num_gun = 2;
         }else{
@@ -262,7 +262,7 @@ public class PlayerController : MonoBehaviour
             }
             else if (collision.gameObject.name =="Railgun") {
                 Destroy(collision.gameObject);
-                num_gun++;
+                num_gun = 3;
             }
         }
     }
