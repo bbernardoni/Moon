@@ -688,6 +688,7 @@ MonoBehaviour:
   gunPivot: {fileID: 988374602421172176}
   gun: {fileID: 988374601260895697}
   corpse: {fileID: 8729596025865877029, guid: 7b9547a3e8b96ed42893daba70602b10, type: 3}
+  railgun: {fileID: 21300000, guid: 8e53da4922f2b46e1a7e1641fb40aa24, type: 3}
   lookR: 0
   guns:
   - 
@@ -700,6 +701,8 @@ MonoBehaviour:
   hp: {fileID: 988374602731329588}
   bullet: {fileID: 3286294735871222309, guid: 0cf6bbfc1cae1b3408a9bbd3d51c091e, type: 3}
   shotgunBullet: {fileID: 3286294735871222309, guid: d2cb8be6d84384698844acb6019092ae,
+    type: 3}
+  railgunBullet: {fileID: 3286294735871222309, guid: 713b338447a7a41b2829aba4745e95b8,
     type: 3}
   animator: {fileID: 1831969835}
 --- !u!50 &988374602731329544
@@ -930,9 +933,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7d3dd247dc242f14499875203ea87a14, type: 3}
   fireShotgun:
   - {fileID: 8300000, guid: 8eabe3f13b1154a92946b9ceaf925fd5, type: 3}
+  fireRailgun:
+  - {fileID: 8300000, guid: 65d05d21e03754398820ec4d34582dde, type: 3}
   playerFS: {fileID: 339623903}
   playerGun: {fileID: 1595705254}
   playerVoice: {fileID: 1773328763}
   playerShotgun: {fileID: 1595705254}
+  playerRailgun: {fileID: 1595705254}
   lowPitchRange: 0.95
   highPitchRange: 1.05

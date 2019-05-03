@@ -12713,12 +12713,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 436076160}
   m_PrefabAsset: {fileID: 0}
---- !u!82 &439535419 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 1595705254, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03,
-    type: 3}
-  m_PrefabInstance: {fileID: 1418347409}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &448682774 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4925001517059558124, guid: 1dfd42a5414d24a83a39b5e1e3f21acf,
@@ -21096,16 +21090,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3286337813292664909, guid: ea87c84f8b9c8e0409c00c48a5f898e1,
-        type: 3}
-      propertyPath: BossMusic.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3286337813292664909, guid: ea87c84f8b9c8e0409c00c48a5f898e1,
-        type: 3}
-      propertyPath: BossMusic.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: 998862812f56bb7479e97fa63685a6e1, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea87c84f8b9c8e0409c00c48a5f898e1, type: 3}
 --- !u!1001 &780069779
@@ -38871,18 +38855,6 @@ PrefabInstance:
       propertyPath: uIController
       value: 
       objectReference: {fileID: 491922291}
-    - target: {fileID: 988374602731329547, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03,
-        type: 3}
-      propertyPath: railgunBullet
-      value: 
-      objectReference: {fileID: 3286294735871222309, guid: 713b338447a7a41b2829aba4745e95b8,
-        type: 3}
-    - target: {fileID: 988374602731329547, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03,
-        type: 3}
-      propertyPath: railgun
-      value: 
-      objectReference: {fileID: 21300000, guid: 8e53da4922f2b46e1a7e1641fb40aa24,
-        type: 3}
     - target: {fileID: 988374602731329546, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -38938,18 +38910,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 669785501, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03, type: 3}
-      propertyPath: fireRailgun.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 669785501, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03, type: 3}
-      propertyPath: fireRailgun.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: 65d05d21e03754398820ec4d34582dde, type: 3}
-    - target: {fileID: 669785501, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03, type: 3}
-      propertyPath: playerRailgun
-      value: 
-      objectReference: {fileID: 439535419}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03, type: 3}
 --- !u!1001 &1423503521
@@ -56818,11 +56778,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 3962000769200231780, guid: c4039dbd3e3f540468e57810523f3bd9,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3962000769200231800, guid: c4039dbd3e3f540468e57810523f3bd9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -56938,12 +56893,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1357013648}
-    - target: {fileID: 3962000768173197229, guid: c4039dbd3e3f540468e57810523f3bd9,
-        type: 3}
-      propertyPath: railgun
-      value: 
-      objectReference: {fileID: 21300000, guid: 8e53da4922f2b46e1a7e1641fb40aa24,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4039dbd3e3f540468e57810523f3bd9, type: 3}
 --- !u!4 &5760775406172839393 stripped
