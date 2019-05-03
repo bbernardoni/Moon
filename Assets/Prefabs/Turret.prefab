@@ -177,6 +177,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 267839190798004058, guid: 36882c5f2a3092e478cb8e8f81fd0a06, type: 3}
   hp: {fileID: 7273616858837694205}
+  explosion: {fileID: 4671226840319715866, guid: 4c20738892c81224d8f20157528b09c6,
+    type: 3}
+  explosionSound: {fileID: 8300000, guid: 457fd3588a88a754685be5bd0b53b6f3, type: 3}
 --- !u!50 &7273616858837694195
 Rigidbody2D:
   serializedVersion: 4

@@ -13,6 +13,9 @@ public class TurretController : MonoBehaviour
     private float cooldown = 0;
     private bool agroed = false;
 
+    public Transform explosion;
+    public AudioClip explosionSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -62,6 +65,8 @@ public class TurretController : MonoBehaviour
         else {
             if(agroed)
                 GameManager.instance.AggroCounter(0, false);
+            SoundManager.instance.PlaySingle(explosionSound);
+            Instantiate(explosion, rb2d.transform.position, Quaternion.identity);
             Destroy(rb2d.transform.parent.gameObject);
         }
     }
