@@ -96,11 +96,15 @@ public class GameManager : MonoBehaviour
         musicManager.next_music = MusicManager.MusicState.OutOfCombat;
     }
 
-    public void SetBoss()
+    public void SetBoss(int i)
     {
-        if (MusicManager.MusicState.Boss == musicManager.current_music) return;
+        MusicManager.MusicState music;
+        if(i == 1) music = MusicManager.MusicState.Boss1;
+        else       music = MusicManager.MusicState.Boss2;
+
+        if (music == musicManager.current_music) return;
         musicManager.FadeMusic();
-        musicManager.next_music = MusicManager.MusicState.Boss;
+        musicManager.next_music = music;
     }
 
     private void SetDeath()
