@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
         gunGameObject = gun.gameObject;
         shotgun = Resources.Load<Sprite>("Shotgun1") as Sprite;
         pistol = Resources.Load<Sprite>("Pistol1") as Sprite;
-        railgun = Resources.Load<Sprite>("Pistol1") as Sprite;
+        railgun = Resources.Load<Sprite>("railgun") as Sprite;
 
         pistolAnim = Resources.Load<Animator>("PistolAnimator") as Animator;
         shotgunAnim = Resources.Load<Animator>("ShotgunAnimator") as Animator;
