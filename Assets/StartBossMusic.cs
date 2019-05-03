@@ -9,7 +9,6 @@ public class StartBossMusic : MonoBehaviour
     void Awake()
     {
         GameManager.instance.CombatCounter = 0;
-        GameManager.instance.isBoss = true;
         GameManager.instance.SetBoss(boss_level);
     }
 

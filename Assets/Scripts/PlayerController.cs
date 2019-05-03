@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -59,7 +60,13 @@ public class PlayerController : MonoBehaviour
         shotgunAnim = Resources.Load<Animator>("ShotgunAnimator") as Animator;
         spriteRenderer = gun.GetComponent<SpriteRenderer>();
         guns = new string[3];
-        num_gun = 2;
+        Scene scene = SceneManager.GetActiveScene();
+        if (scene.name != "Level 2 Boss")
+        {
+            num_gun = 2;
+        }else{
+            num_gun = 3;
+        }
         guns[0] = "Pistol1";
         guns[1] = "Shotgun1";
         guns[2] = "Railgun1";
@@ -156,7 +163,7 @@ public class PlayerController : MonoBehaviour
                 switchGun = (switchGun + 1) % num_gun;
             }
             if(Input.GetButtonDown("SwitchBack")) {
-                switchGun = (switchGun + guns.Length - 1) % num_gun;
+                switchGun = (switchGun + num_gun - 1) % num_gun;
             }
 
             if(switchGun != currentGun) {
