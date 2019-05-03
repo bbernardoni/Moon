@@ -70,6 +70,7 @@ public class PlayerController : MonoBehaviour
         guns[0] = "Pistol1";
         guns[1] = "Shotgun1";
         guns[2] = "Railgun1";
+        GameManager.instance.CombatCounter = 0;
 
     }
 
