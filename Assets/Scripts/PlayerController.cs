@@ -156,7 +156,7 @@ public class PlayerController : MonoBehaviour
                 switchGun = (switchGun + 1) % num_gun;
             }
             if(Input.GetButtonDown("SwitchBack")) {
-                switchGun = (switchGun + guns.Length - 1) % num_gun;
+                switchGun = (switchGun + num_gun - 1) % num_gun;
             }
 
             if(switchGun != currentGun) {
