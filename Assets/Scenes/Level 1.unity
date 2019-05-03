@@ -50094,7 +50094,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 261e70028b84cd646a899670c824f11d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: -0.58
+  offset: -0.4
 --- !u!1001 &1907517821
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56893,12 +56893,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1357013648}
-    - target: {fileID: 3962000768173197229, guid: c4039dbd3e3f540468e57810523f3bd9,
-        type: 3}
-      propertyPath: railgun
-      value: 
-      objectReference: {fileID: 21300000, guid: 4fa730680c5fa48eca8c7015b94da443,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4039dbd3e3f540468e57810523f3bd9, type: 3}
 --- !u!4 &5760775406172839393 stripped

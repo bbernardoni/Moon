@@ -1221,7 +1221,7 @@ MonoBehaviour:
   gun_image: {fileID: 3962000768173197218}
   pistol: {fileID: 21300000, guid: 0b7fa257dec7281439deb7156798a305, type: 3}
   shotgun: {fileID: 21300000, guid: 21c47b4382295e2499cb7fe66a724a4f, type: 3}
-  railgun: {fileID: 21300000, guid: 8e53da4922f2b46e1a7e1641fb40aa24, type: 3}
+  railgun: {fileID: 21300000, guid: 67ce39093f7474787be5a99fd44d9e2f, type: 3}
 --- !u!1 &3962000768601143271
 GameObject:
   m_ObjectHideFlags: 0
