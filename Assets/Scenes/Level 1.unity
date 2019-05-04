@@ -584,7 +584,7 @@ MonoBehaviour:
   manualDebugFloorRoof: 0
   showSearchTree: 1
   unwalkableNodeDebugSize: 0.3
-  logPathResults: 3
+  logPathResults: 0
   maxNearestNodeDistance: 100
   scanOnStartup: 1
   fullGetNearestSearch: 0
@@ -643,7 +643,7 @@ MonoBehaviour:
     seed: 0
     pivotPointRoot: {fileID: 0}
     spreadOutCount: 1
-  showGraphs: 1
+  showGraphs: 0
 --- !u!4 &34566632
 Transform:
   m_ObjectHideFlags: 0

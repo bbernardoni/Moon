@@ -4393,6 +4393,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: electric
       objectReference: {fileID: 0}
+    - target: {fileID: 8078726684708830898, guid: 6c437dfef580f420aaca734af9d860c3,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1372576885}
     - target: {fileID: 2730255001103494643, guid: 6c437dfef580f420aaca734af9d860c3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4448,11 +4453,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8078726684708830898, guid: 6c437dfef580f420aaca734af9d860c3,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1372576885}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c437dfef580f420aaca734af9d860c3, type: 3}
 --- !u!1001 &198600647
@@ -10044,6 +10044,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: electric
       objectReference: {fileID: 0}
+    - target: {fileID: 8078726684708830898, guid: 6c437dfef580f420aaca734af9d860c3,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1372576885}
     - target: {fileID: 2730255001103494643, guid: 6c437dfef580f420aaca734af9d860c3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10099,11 +10104,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8078726684708830898, guid: 6c437dfef580f420aaca734af9d860c3,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1372576885}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c437dfef580f420aaca734af9d860c3, type: 3}
 --- !u!4 &443545052 stripped
@@ -32069,7 +32069,7 @@ MonoBehaviour:
   manualDebugFloorRoof: 0
   showSearchTree: 1
   unwalkableNodeDebugSize: 0.3
-  logPathResults: 3
+  logPathResults: 0
   maxNearestNodeDistance: 100
   scanOnStartup: 1
   fullGetNearestSearch: 0
